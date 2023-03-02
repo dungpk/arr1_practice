@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<h3>Caro Game Simple</h3>
+<p id="bai1" />
+
+</body>
+
+<script>
+    let arr = [0,0];
+    let count=0;
+    let maxValue = 0;
+    let res = document.getElementById("bai1");
+    for(let i=0;i<10;i++)
+    {
+        let value = +prompt("Nhap phan tu thu"+(i+1)+': ');
+        arr[i] = value;
+
+    }
+    document.write(arr.length);
+    maxValue = arr[0];
+    for(let i=0;i<(arr.length);i++)
+    {
+        if(maxValue <= arr[i]) {maxValue = arr[i];count=i}
+    }
+    res.innerHTML = "gia tri lon nhat la: "+ maxValue + " va o vi tri: "+count;
+
+
+</script>
+
+</html>

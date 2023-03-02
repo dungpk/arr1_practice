@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<h3>bai 3</h3>
+<p id="bai1" />
+
+</body>
+
+<script>
+    let arr = [];
+    let Sum=0;
+    let maxValue = 0;
+    let res = document.getElementById("bai1");
+    for(let i=0;i<10;i++)
+    {
+        let value = +prompt("Nhap phan tu thu"+(i+1)+': ');
+        arr[i] = value;
+
+    }
+    maxValue = arr[0];
+    for(let i=0;i<(arr.length);i++)
+    {
+        if(maxValue <= arr[i]) {maxValue = arr[i];Sum+=arr[i]}
+    }
+    res.innerHTML = "gia tri lon nhat la: "+ maxValue + " va gia tri trung binh la: "+ (Sum/10);
+
+
+</script>
+
+</html>

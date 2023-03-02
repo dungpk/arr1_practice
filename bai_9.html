@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<h3>bai 3</h3>
+<p id="arr1" ></p>
+<p id="arr2" ></p>
+<p id="arrResult"></p>
+
+
+</body>
+
+<script>
+    let arrOne = [];
+    let arrTwo = [];
+    let amountOne;
+    let amountTwo;
+    check =false;
+
+    let resArr1 = document.getElementById("arr1");
+    let resArr2 = document.getElementById("arr2");
+    let res = document.getElementById("arrResult");
+    do{
+        amountOne= +prompt("Nhap so phan tu cua mang 1: ")
+        if(isNaN(amountOne) || amountOne%1 != 0){alert("gia tri cua mang phai la so nguyen")}
+            else{check=true}
+        }while(check == false)
+         check =false;
+    do{
+        amountTwo= +prompt("Nhap so phan tu cua mang 2 : ")
+        if(isNaN(amountTwo) || amountTwo%1 != 0){alert("gia tri cua mang phai la so nguyen")}
+        else{check=true}
+    }while(check == false)
+    check =false;
+
+    for (let i=0;i<amountOne;i++)
+    {
+        arrOne[i] = prompt("Nhap gia tri thu: "+i +" cua mang 1: ");
+    }
+    resArr1.innerHTML = "day duoc ghep la " +arrOne + "<br>";
+    for (let i=0;i<amountTwo;i++)
+    {
+        arrTwo[i] = prompt("Nhap gia tri thu: "+i +" cua mang 1: ");
+    }
+    resArr2.innerHTML = "day duoc ghep la " +arrTwo + "<br>";
+
+
+    for(let i=0;i<arrTwo.length;i++)
+    {
+        arrOne.push(arrTwo[i])
+    }
+    res.innerHTML = "day duoc ghep la " +arrOne + "<br>";
+
+
+</script>
+
+</html>

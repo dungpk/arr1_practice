@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<h3>bai 3</h3>
+<p id="bai1" />
+<p id="bai2" />
+
+</body>
+
+<script>
+    let arr = [];
+    let amount;
+    check =false;
+    do{
+        amount= +prompt("Nhap so phan tu cua mang: ")
+        if(isNaN(amount) || amount%1 != 0){alert("gia tri cua mang phai la so nguyen")}
+            else{check=true}
+        }while(check == false)
+         check =false;
+
+    let res = document.getElementById("bai1");
+    for(let i=0;i<amount;i++)
+    {
+        let value = +prompt("Nhap phan tu thu"+(i+1)+': ');
+        arr[i] = value;
+    }
+    res.innerHTML = "day ban dau la: " +arr + "<br>";
+    for(let i=0;i<amount-1;i++)
+    {
+        for(let j= i+1;j<amount;j++)
+        {
+            if(arr[i]<arr[j])
+            {
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    let res1 = document.getElementById("bai2");
+    res1.innerHTML = "day sau khi sap xep la : " +arr;
+
+</script>
+
+</html>
